@@ -90,3 +90,14 @@ let finances = [
 
 // Calculates and displays total months
 console.log("Total Month: " + finances.length);
+
+// extracts monthly Profit/Losses from array...
+
+let sum = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    const monthlyFinances = finances[i];
+    const monthlyProfitloss = monthlyFinances[1];
+}
+
+
