@@ -103,3 +103,16 @@ console.log ("Total: $" + totalProfitloss);
 
 // Calculates the average of changes in Profit/Losses over the entire period
 
+let totalMonthlychanges = 0;
+
+for (let i = 0; i < finances.length-1; i++) {
+    const monthlyChanges = finances[i+1][1] - finances [i][1];
+    totalMonthlychanges += monthlyChanges;
+}
+
+averageChange = totalMonthlychanges / (finances.length-1)
+
+console.log("Average Change: $" + averageChange.toFixed(2));
+
+
+
