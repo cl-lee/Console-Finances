@@ -88,7 +88,7 @@ let finances = [
     ['Feb-2017', 671099]
 ];
 
-// finances.length to calculate the total months
+// To calculate the total months: finance.length
 
 // Calculates the total amount of Profit/Losses over the entire period
 let totalProfitloss = 0;
@@ -101,8 +101,8 @@ for (let i = 0; i < finances.length; i++) {
 // Calculates the average of changes in Profit/Losses over the entire period
 let totalMonthlychanges = 0;
 
-for (let i = 0; i < finances.length - 1; i++) {
-    const monthlyChanges = finances[i + 1][1] - finances[i][1];
+for (let i = 1; i < finances.length; i++) {
+    const monthlyChanges = finances[i][1] - finances[i-1][1];
     totalMonthlychanges += monthlyChanges;
 }
 
@@ -112,12 +112,12 @@ averageChange = totalMonthlychanges / (finances.length - 1)
 let greatestIncrease = 0;
 let greatestincMonth;
 
-for (let i = 0; i < finances.length - 1; i++) {
-    const monthlyChanges = finances[i + 1][1] - finances[i][1];
+for (let i = 1; i < finances.length; i++) {
+    const monthlyChanges = finances[i][1] - finances[i-1][1];
 
     if (monthlyChanges > greatestIncrease) {
         greatestIncrease = monthlyChanges;
-        greatestincMonth = finances[i + 1][0];
+        greatestincMonth = finances[i][0];
     }
 }
 
@@ -125,12 +125,12 @@ for (let i = 0; i < finances.length - 1; i++) {
 let greatestDecrease = 0;
 let greatestdecMonth;
 
-for (let i = 0; i < finances.length - 1; i++) {
-    const monthlyChanges = finances[i + 1][1] - finances[i][1];
+for (let i = 1; i < finances.length; i++) {
+    const monthlyChanges = finances[i][1] - finances[i-1][1];
 
     if (monthlyChanges < greatestDecrease) {
         greatestDecrease = monthlyChanges;
-        greatestdecMonth = finances[i + 1][0];
+        greatestdecMonth = finances[i][0];
     }
 }
 
