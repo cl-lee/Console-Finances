@@ -102,7 +102,6 @@ for (let i = 0; i < finances.length; i++) {
 console.log ("Total: $" + totalProfitloss);
 
 // Calculates the average of changes in Profit/Losses over the entire period
-
 let totalMonthlychanges = 0;
 
 for (let i = 0; i < finances.length-1; i++) {
@@ -114,5 +113,15 @@ averageChange = totalMonthlychanges / (finances.length-1)
 
 console.log("Average Change: $" + averageChange.toFixed(2));
 
+// Calculates the greatest increase in profits
+let greatestIncrease = 0;
 
+for (let i = 0; i < finances.length-1; i++) {
+    const monthlyChanges = finances[i+1][1] - finances [i][1];
 
+    if(monthlyChanges > greatestIncrease) {
+        greatestIncrease = monthlyChanges;
+    }
+ }
+
+ console.log("Greatest Increase in Profits: ($" + greatestIncrease + ")");
