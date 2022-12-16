@@ -135,7 +135,6 @@ for (let i = 1; i < finances.length; i++) {
 }
 
 //  Displays analysis in console
-
 console.log(
     `Financial Analysis
 ----------------------------
