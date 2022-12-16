@@ -105,7 +105,7 @@ console.log ("Total: $" + totalProfitloss);
 let totalMonthlychanges = 0;
 
 for (let i = 0; i < finances.length-1; i++) {
-    const monthlyChanges = finances[i+1][1] - finances [i][1];
+    const monthlyChanges = finances[i+1][1] - finances[i][1];
     totalMonthlychanges += monthlyChanges;
 }
 
@@ -115,13 +115,30 @@ console.log("Average Change: $" + averageChange.toFixed(2));
 
 // Calculates the greatest increase in profits
 let greatestIncrease = 0;
+let greatestincMonth;
 
 for (let i = 0; i < finances.length-1; i++) {
-    const monthlyChanges = finances[i+1][1] - finances [i][1];
+    const monthlyChanges = finances[i+1][1] - finances[i][1];
 
     if(monthlyChanges > greatestIncrease) {
         greatestIncrease = monthlyChanges;
+        greatestincMonth = finances [i+1][0];
     }
  }
 
- console.log("Greatest Increase in Profits: ($" + greatestIncrease + ")");
+ console.log("Greatest Increase in Profits: " + greatestincMonth + " ($" + greatestIncrease + ")");
+
+ // Calculates the greatest decrease in profits
+let greatestDecrease = 0;
+let greatestdecMonth;
+
+for (let i = 0; i < finances.length-1; i++) {
+    const monthlyChanges = finances[i+1][1] - finances[i][1];
+
+    if(monthlyChanges < greatestDecrease) {
+        greatestDecrease = monthlyChanges;
+        greatestdecMonth = finances [i+1][0];
+    }
+ }
+
+ console.log("Greatest Decrease in Profits: " + greatestdecMonth + " ($" + greatestDecrease + ")");
