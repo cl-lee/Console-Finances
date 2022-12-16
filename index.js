@@ -88,7 +88,7 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
-// Calculates and displays total months
+// For information only, calculates and displays total months
 console.log("Total Month: " + finances.length);
 
 // Calculates the total amount of Profit/Losses over the entire period
@@ -142,3 +142,17 @@ for (let i = 0; i < finances.length-1; i++) {
  }
 
  console.log("Greatest Decrease in Profits: " + greatestdecMonth + " ($" + greatestDecrease + ")");
+
+//  Displays analysis in console
+
+console.log(
+`Financial Analysis
+----------------------------
+Total Month: ${finances.length}
+Total: $${totalProfitloss}
+Average Change: $${averageChange.toFixed(2)}
+Greatest Increase in Profits: ${greatestincMonth} ($${greatestIncrease})
+Greatest Decrease in Profits: ${greatestdecMonth} ($${greatestDecrease})`
+)
+
+
