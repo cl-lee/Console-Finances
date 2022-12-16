@@ -13,7 +13,7 @@ Welcome to my Console Finances repo! The aim of this project is to analyse the f
     5. The **greatest decrease in profits** during the period of time
 
 ## Prerequisites
-A web browser is required to access this project. The results will be displayed on the browser's console.
+A web browser is required to access this project. The results will be displayed in the browser's console.
 
 ## Usage
 * Please visit the following URL to visit access the project webpage:
