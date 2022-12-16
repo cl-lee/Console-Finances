@@ -88,8 +88,7 @@ let finances = [
 ['Feb-2017', 671099]
 ];
 
-// For information only, calculates and displays total months
-console.log("Total Month: " + finances.length);
+// finances.length to calculate the total months
 
 // Calculates the total amount of Profit/Losses over the entire period
 let totalProfitloss = 0;
@@ -98,8 +97,6 @@ for (let i = 0; i < finances.length; i++) {
     const monthlyFinances = finances[i][1];
     totalProfitloss += monthlyFinances;
 }
-
-console.log ("Total: $" + totalProfitloss);
 
 // Calculates the average of changes in Profit/Losses over the entire period
 let totalMonthlychanges = 0;
@@ -110,8 +107,6 @@ for (let i = 0; i < finances.length-1; i++) {
 }
 
 averageChange = totalMonthlychanges / (finances.length-1)
-
-console.log("Average Change: $" + averageChange.toFixed(2));
 
 // Calculates the greatest increase in profits
 let greatestIncrease = 0;
@@ -126,9 +121,7 @@ for (let i = 0; i < finances.length-1; i++) {
     }
  }
 
- console.log("Greatest Increase in Profits: " + greatestincMonth + " ($" + greatestIncrease + ")");
-
- // Calculates the greatest decrease in profits
+  // Calculates the greatest decrease in profits
 let greatestDecrease = 0;
 let greatestdecMonth;
 
@@ -140,8 +133,6 @@ for (let i = 0; i < finances.length-1; i++) {
         greatestdecMonth = finances [i+1][0];
     }
  }
-
- console.log("Greatest Decrease in Profits: " + greatestdecMonth + " ($" + greatestDecrease + ")");
 
 //  Displays analysis in console
 
